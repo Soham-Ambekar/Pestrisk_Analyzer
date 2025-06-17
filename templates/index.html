@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PESTRISK ANALYZER: A NEW ML APPROACH ON PESTICIDES POISONING DIAGNOSIS IN RURAL WORKERS</title>
+    
+    <!-- All CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg " style="background: rgb(28, 26, 26); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#" style="font-size: 1.5rem;">
+                <span style="color: #cdfa07;">Pest</span>Risk Analyzer
+            </a>
+            <button class="navbar-toggler border-0 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
+                style="background: rgb(98, 225, 8); padding: 5px 10px; border-radius: 5px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-3" href="#" style="transition: 0.3s;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-3" href="#services" style="transition: 0.3s;">Services</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-3" href="#contact" style="transition: 0.3s;">Contact Doctor</a>
+                    </li>        
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--HERO SEC-->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to <span class="underlined">PestRisk Analyzer</span>
+            </h1>
+            <p class="hero-description">
+                Advanced predictive tool designed to assess potential health risks posed to humans following the ingestion of specific pesticides.
+            </p>
+        </div>
+        
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path 
+                    fill="#ffffff" 
+                    fill-opacity="1" 
+                    d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
+                </path>
+                <path 
+                    fill="#808080" 
+                    fill-opacity="0.3" 
+                    d="M0,60L80,65.3C160,71,320,81,480,77.3C640,73,800,56,960,51.3C1120,47,1280,55,1360,58.7L1440,62L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- about section starts -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="{{ url_for('static', filename='img/about.webp') }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>Pesticides are Grouped Into<br/> </h2>
+                        <p>Pesticides prevent, destroy or control harmful organisms (“pests”) or diseases, or to protect plants and plant products during production, storage and transportation.
+                            <br>
+                            <li>Herbicides against “weeds” </li>
+                            <li>Fungicides against moulds</li>
+                            <li>Plant growth regulators</li> 
+                            <li>Insecticides against insects</li>
+                            <li>Repellents </li>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section Ends -->
+
+    <!-- services section Starts -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Services</h2>
+                        <p>For Prediction and Detection of Diesease <br> use this services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="card-title">Diesease N Symptoms Predictor</h3>
+                            <p class="lead">Predictive model for the PestRisk Analyzer will be designed to forecast both short-term symptoms and long-term diseases resulting from pesticide ingestion to human being those who work and leave near Farms. Moreover, this predictive model with take an pesticide name input from the user and diagnose short term symptoms and long term diseases.</p>
+                            <button class="btn bg-warning text-dark">
+                                <a href="{{ url_for('pesticide_prediction') }}" style="text-decoration: none; color: inherit;">USE SERVICE</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-journal"></i>
+                            <h3 class="card-title">ChatBot</h3>
+                            <p class="lead">Smart Bot will play a crucial role in the PestRisk Analyzer project by acting as an intelligent assistant, offering real-time interactions with users, including healthcare professionals, agricultural workers, and general consumers. The bot will enhance the user experience by providing timely, personalized, and reliable insights based on the predictive machine learning model.</p>
+                            <button class="btn bg-warning text-dark">
+                                <a href="{{ url_for('chatbot') }}" style="text-decoration: none; color: inherit;">USE SERVICE</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-intersect"></i>
+                            <h3 class="card-title">Skin Cancer Detector</h3>
+                            <p class="lead">A skin cancer detection project aims to develop a system that can automatically identify and classify skin lesions, distinguishing between benign and malignant growths. Using image processing, machine learning, and deep learning techniques, the project typically involves training a model on a dataset of skin images to detect signs of skin cancer, such as melanoma.</p>
+                            <button class="btn bg-warning text-dark">
+                                <a href="{{ url_for('skin_cancer_detection') }}" style="text-decoration: none; color: inherit;">USE SERVICE</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services section Ends -->
+
+    <!-- Call to Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+        <div class="container">
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-xl-9 text-center text-xl-start">
+                    <h3>Call To Action</h3>
+                    <p>IN CASE OF ANY EMERGENCY, YOU MAY CALL TO 108 FOR QUICK AMBULANCE SERVICE </p>
+                </div>
+                <div class="col-xl-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="Tel:108">Call To 108</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section Starts -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Specialist And Multispeciality Hospitals</h2>
+                        <p>Top Hospitals Listed In Our Region <br>Providing Proper Treatment to Cure Us</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Hospital 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center bg-white shadow-sm">
+                        <div class="img-area mb-4">
+                            <img src="{{ url_for('static', filename='img/sidhi.avif') }}" class="img-fluid rounded-top" alt="Siddhivinayak Heart Hospital">
+                        </div>
+                        <div class="card-body text-dark">
+                            <h3 class="card-title font-weight-bold mb-3">Siddhivinayak Hospital</h3>
+                            <p class="card-text">A multispeciality hospital aiming to provide world-class healthcare services to the city and surrounding regions.Over the years,it has earned a reputation for delivering high-quality medical care and treatment to patients from various walks of life.</p>
+                            <a href="https://siddhivinayakhospital.in/" class="btn btn-warning text-dark">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hospital 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center bg-white shadow-sm">
+                        <div class="img-area mb-4">
+                            <img src="{{ url_for('static', filename='img/kolhapurcancer.jpg') }}" class="img-fluid rounded-top" alt="Kolhapur Cancer Center">
+                        </div>
+                        <div class="card-body text-dark">
+                            <h3 class="card-title font-weight-bold mb-3">Kolhapur Cancer Center</h3>
+                            <p class="card-text">The leading and most comprehensive Cancer Centre in South-West Maharashtra. Kolhapur Cancer Centre (KCC) takes care of all aspects of Cancer care: diagnosis, surgery, radiotherapy, chemotherapy, awareness camps, and rehabilitation.</p>
+                            <a href="https://www.kolhapurcancercentre.com/" class="btn btn-warning text-dark">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hospital 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center bg-white shadow-sm">
+                        <div class="img-area mb-4">
+                            <img src="{{ url_for('static', filename='img/cardio.jpeg') }}" class="img-fluid rounded-top" alt="Sachin Multispeciality Hospital">
+                        </div>
+                        <div class="card-body text-dark">
+                            <h3 class="card-title font-weight-bold mb-3">Sachin Multispeciality Hospital</h3>
+                            <p class="card-text">Committed to providing exceptional healthcare services with a focus on patient care, treatments, and cutting-edge technology.It is designed to offer comprehensive medical care across various specialties.</p>
+                            <a href="https://www.sachinhospital.com/" class="btn btn-warning text-dark">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section Ends -->
+
+    <!-- Contact starts -->
+    <section id="contact" class="contact section-padding">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-start pb-5">
+                        <h2>Contact To Doctor </h2>
+                        <p>KALAPRASAD HOSPITAL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0"> 
+                <!-- Right Side Contact Info with Address, Phone, and Name -->
+                <div class="col-md-6 p-0 pt-4 pb-4">
+                    <div class="contact-info p-4">
+                        <p><strong>Address:</strong> KALAPRASAD HOSPITAL <br> 2832, Ravi Bank, JawaharalaNagar, kolhapur</p>
+                        <p><strong>Call us:</strong> +91 9309021219 / +91 8668642220</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer starts -->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">PESTRISK ANALYZER</p>
+        </div>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- All Js -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
